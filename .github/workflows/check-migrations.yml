@@ -1,0 +1,26 @@
+name: Check Migrations
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  rails-migrations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: toruyamad-alt/migration-sentinel@v0.1.1
+        with:
+          target: db/migrate
+          output: github
+          fail-on: high
+
+  prisma-migrations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: toruyamad-alt/migration-sentinel@v0.1.1
+        with:
+          target: prisma/migrations
+          output: github
+          fail-on: high

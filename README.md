@@ -39,6 +39,6 @@ jobs:
 
 ## Included examples
 
-- [`db/migrate/202603190001_add_timezone.sql`](/Users/ty/Desktop/migration-sentinel-demo/db/migrate/202603190001_add_timezone.sql): safe backfill + `NOT NULL`
-- [`db/migrate/202603190002_drop_legacy_status.sql`](/Users/ty/Desktop/migration-sentinel-demo/db/migrate/202603190002_drop_legacy_status.sql): intentionally risky `DROP COLUMN`
-- [`prisma/migrations/202603190001_add_timezone/migration.sql`](/Users/ty/Desktop/migration-sentinel-demo/prisma/migrations/202603190001_add_timezone/migration.sql): Prisma migration example
+- `db/migrate/202603190001_add_timezone.sql`: safe backfill + `NOT NULL`
+- `db/migrate/202603190002_drop_legacy_status.sql`: intentionally risky `DROP COLUMN`
+- `prisma/migrations/202603190001_add_timezone/migration.sql`: Prisma migration example
